@@ -1,5 +1,5 @@
 // Service Worker for XiaoGao PWA
-const CACHE_NAME = 'xiaogao-v2'
+const CACHE_NAME = 'xiaogao-v3'
 
 self.addEventListener('install', () => {
   self.skipWaiting()
