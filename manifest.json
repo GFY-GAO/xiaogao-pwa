@@ -1,0 +1,18 @@
+{
+  "name": "小高智能伙伴",
+  "short_name": "小高",
+  "description": "你的AI智能伙伴",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0a0a14",
+  "theme_color": "#0a0a14",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
