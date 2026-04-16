@@ -1,5 +1,5 @@
 // Service Worker for XiaoGao PWA
-const CACHE_NAME = 'xiaogao-v3'
+const CACHE_NAME = 'xiaogao-v4'
 
 self.addEventListener('install', () => {
   self.skipWaiting()
@@ -20,6 +20,11 @@ self.addEventListener('fetch', (event) => {
 
   // Don't cache API calls or cross-origin requests
   if (url.pathname.startsWith('/api') || url.hostname !== self.location.hostname) {
+    return
+  }
+
+  // 3D assets are cached by IndexedDB in the app — skip Cache API to avoid double storage
+  if (/\.(vrm|vrma|fbx)(\?.*)?$/.test(url.pathname)) {
     return
   }
 
